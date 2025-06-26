@@ -45,11 +45,11 @@ macro_rules! prntkv {
     }};
 
     // Case 2: Key and formatted value
-    ($key:expr, $fmt:expr, $($args:tt)+) => {{
+    ($key:expr, $($args:tt)+) => {{
         $crate::write_coloured_key_value(
             $key,
-            &format!($fmt, $($args)+),
-            termcolor::Color::Cyan,
+            &format!($($args)+),
+            termcolor::Color::Red,
             termcolor::Color::Yellow,
         );
     }};
@@ -68,10 +68,10 @@ macro_rules! prntkve {
     }};
 
     // Case 2: Key and formatted value
-    ($key:expr, $fmt:expr, $($args:tt)+) => {{
+    ($key:expr, $($args:tt)+) => {{
         $crate::write_coloured_key_value(
             $key,
-            &format!($fmt, $($args)+),
+            &format!($($args)+),
             termcolor::Color::Red,
             termcolor::Color::Yellow,
         );
