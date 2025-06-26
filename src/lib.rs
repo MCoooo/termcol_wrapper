@@ -20,7 +20,7 @@ macro_rules! prnth {
 #[macro_export]
 macro_rules! prntdbg {
     ($($arg:tt)*) => {{
-        $crate::write_coloured_output(&format!($($arg)*), $crate::termcolor::Color::Blue);
+        $crate::write_coloured_output(&format!($($arg)*), $crate::termcolor::Color::White);
     }};
 }
 
